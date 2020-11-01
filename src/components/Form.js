@@ -31,7 +31,7 @@ const Form = ({ todoList, formInputs, setFormInputs, setTodoList }) => {
 
   return (
     <section className="form-section">
-      <h1 className="form-section-header">Seb&apos; Todolist</h1>
+      <h1 className="form-section-header">Seb&apos;s Todolist</h1>
       <form className="form" onSubmit={(e) => submitForm(e)}>
         <input
           type="text"
