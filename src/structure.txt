@@ -1,0 +1,58 @@
+
+Components:
+    App
+        div - .app
+            section - .form-section
+                <Form />
+            section - .list-section
+                <TodoList />
+                    <Todo />
+            
+    Form
+        form
+            input - title
+            input - description
+
+    TodoList
+        div - .todoContainer
+            ul - .list
+            
+
+    Todo
+        li - .list-item
+            h4 - .item-title
+            p - .item-description
+
+States:
+    App:
+        [formInputs, setFormInputs] = useState({title: "", description: ""});
+        [todoList, setTodoList] = useState([]);
+
+
+Objects:
+
+    Todo
+        {
+            title: formInputs.title,
+            description: formInputs.description
+            completed: boolean
+        }
+
+
+
+
+
+Tech Requirements:
+    - There MUST be a form input where the user can add a new todo.
+    - On first load the list of todos MUST be empty.
+    - When the user submits a new todo from the form the todo card MUST appear in the list.
+    - Each todo card MUST be toggleable between 'done' and 'not done'.
+    - There MUST be a remove-button on cards that are 'done' and when the user clicks the button it will be removed from the list completely.
+    - Todo cards which are set to 'done' MUST appear on the bottom of the list, and they SHOULD be easy to visually separate.
+    - The original order of the cards MUST be maintained if you toggle a card to 'done' and then back again.
+    - It SHOULD be easy to add, toggle and remove todo's. For example adding a new card by hitting 'enter'
+
+    - You MUST keep the todo-list in a state object, you can choose yourself where this should reside.
+    - You MUST use at least 3 levels of components. In the simplest case this would be an App component in which you have a TodoList component containing TodoCard components.
+    - You MUST use props for passing the necessary information to the todo components.
+    -You MUST NOT use React Router, Hooks nor Redux.

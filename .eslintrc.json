@@ -1,0 +1,5 @@
+{
+    "extends": ["salt/react", "salt/react/hooks"],
+    "plugins": ["react"],
+    "parser": "babel-eslint"
+}
